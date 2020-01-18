@@ -20,13 +20,13 @@ class ScrapperServiceProvider extends ServiceProvider
 //            __DIR__.'/Database/migrations/' => database_path('migrations')
 //        ], 'scrapper');
 
-        if (! class_exists('CreateProxiesTable')) {
+        if (! class_exists('\database\migrations\CreateProxiesTable')) {
             $this->publishes([
                 __DIR__.'/Database/migrations/create_proxies_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_proxies_table.php'),
             ], 'scrapper');
         }
 
-        if (! class_exists('CreateUserAgentsTable')) {
+        if (! class_exists('\database\migrations\CreateUserAgentsTable')) {
             $this->publishes([
                 __DIR__.'/Database/migrations/create_user_agents_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_user_agent_table.php'),
             ], 'scrapper');

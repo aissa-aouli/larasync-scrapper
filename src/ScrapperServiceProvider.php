@@ -40,7 +40,7 @@ class ScrapperServiceProvider extends ServiceProvider
     {
 
         // Load the config file and merge it with the user's (should it get published)
-//        $this->mergeConfigFrom( __DIR__.'/config/scrapper.php', 'scrapper');
+        $this->mergeConfigFrom( __DIR__.'/config/scrapper.php', 'scrapper');
 
         $this->publishes([
                 __DIR__.'/config/scrapper.php' => config_path('scrapper.php'),

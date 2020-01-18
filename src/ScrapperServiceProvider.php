@@ -12,7 +12,7 @@ class ScrapperServiceProvider extends ServiceProvider
          */
 
         $this->publishes([
-            __DIR__ . 'ScrapperServiceProvider.php' => app_path('Providers/ScrapperServiceProvider.php'),
+            __DIR__ . '/ScrapperServiceProvider.php' => app_path('Providers/ScrapperServiceProvider.php'),
         ], 'scrapper-provider');
 
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');

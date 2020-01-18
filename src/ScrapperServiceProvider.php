@@ -21,7 +21,7 @@ class ScrapperServiceProvider extends ServiceProvider
 //        ], 'scrapper');
 
 
-        if (! class_exists( __DIR__.'/database/migrations/CreateProxiesTable')) {
+        if (! class_exists( 'CreateProxiesTable')) {
             $this->publishes([
                 __DIR__.'/Database/migrations/create_proxies_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_proxies_table.php'),
             ], 'scrapper');

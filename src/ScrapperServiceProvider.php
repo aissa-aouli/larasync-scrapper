@@ -33,12 +33,14 @@ class ScrapperServiceProvider extends ServiceProvider
             ], 'scrapper');
         }
 
+        dd('boot');
 
     }
 
     public function register()
     {
 
+        dd('register');
         // Load the config file and merge it with the user's (should it get published)
 //        $this->mergeConfigFrom( __DIR__.'/config/scrapper.php', 'scrapper');
 
@@ -55,6 +57,7 @@ class ScrapperServiceProvider extends ServiceProvider
      */
     protected function bootForConsole()
     {
+        dd('bootForConsole');
         $this->publishes([
                 __DIR__.'/config/scrapper.php' => config_path('scrapper.php'),
             ]

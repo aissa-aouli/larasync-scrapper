@@ -1,0 +1,31 @@
+{
+    "name": "larasync/scrapper",
+    "description": "Larasync Scrapper",
+    "type": "library",
+    "require": {
+        "nesk/puphpeteer": "^1.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aissa",
+            "email": "aissa.aouli@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "Database"
+        ],
+        "psr-4": {
+            "Larasync\\Scrapper\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Larasync\\Scrapper\\ScrapperServiceProvider"
+            ]
+        }
+    }
+}

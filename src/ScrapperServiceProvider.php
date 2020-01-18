@@ -32,7 +32,7 @@ class ScrapperServiceProvider extends ServiceProvider
                 __DIR__.'/Database/migrations/create_user_agents_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_user_agent_table.php'),
             ], 'scrapper');
         }
-        
+
 
     }
 

@@ -11,13 +11,14 @@ class ScrapperServiceProvider extends ServiceProvider
          * Publishing service provider for users to modify if needed.
          */
 
-        dd('service provider');
-
+        dd(__DIR__ );
+        
         $this->publishes([
             __DIR__ . '/ScrapperServiceProvider.php' => app_path('Providers/ScrapperServiceProvider.php'),
         ], 'scrapper-provider');
 
-        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/Database/migrations/');
+
         $this->publishes([
             __DIR__.'/config/scrapper.php' => config_path('scrapper.php'),
         ], 'config');

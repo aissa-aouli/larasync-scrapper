@@ -24,5 +24,11 @@
                 "Larasync\\Scrapper\\ScrapperServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "post-update-cmd": "npm update",
+        "post-install-cmd": [
+            "npm install @nesk/puphpeteer"
+        ]
     }
 }

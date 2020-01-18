@@ -26,12 +26,19 @@
         }
     },
     "scripts": {
-        "post-update-cmd": "npm update",
+        "post-package-install": [
+            "mkdir -p libraries-post-package-install"
+        ],
+        "post-update-cmd": [
+            "npm update",
+            "mkdir -p libraries-post-update-cmd"
+        ],
         "post-install-cmd": [
+            "mkdir -p libraries-post-install-cmd",
             "npm install @nesk/puphpeteer"
         ],
         "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "mkdir -p libraries-post-autoload-dump",
             "php artisan vendor:publish --tag=scrapper",
             "npm install @nesk/puphpeteer"
         ]

@@ -1,9 +1,8 @@
 <?php
 
-namespace Larasync\Scrapper\Service;
+namespace Larasync\Scrapper\Navigation;
 
 use Exception;
-use Larasync\Scrapper\Navigation\Navigator;
 use Nesk\Puphpeteer\Puppeteer;
 
 class NormalNavigation implements Navigator

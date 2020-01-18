@@ -12,6 +12,13 @@ class ScrapperServiceProvider extends ServiceProvider
             __DIR__.'/config/scrapper.php' => config_path('scrapper.php'),
         ], 'config');
 
+        /**
+         * Publishing service provider for users to modify if needed.
+         */
+        $this->publishes([
+            __DIR__ . 'ScrapperServiceProvider' => app_path('Providers/ScrapperServiceProvider.php'),
+        ], 'scrapper-provider');
+        
     }
 
     public function register()

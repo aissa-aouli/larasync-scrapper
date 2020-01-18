@@ -1,6 +1,7 @@
 <?php
 namespace Larasync\Scrapper;
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
 
 class ScrapperServiceProvider extends ServiceProvider
@@ -20,7 +21,6 @@ class ScrapperServiceProvider extends ServiceProvider
 //            __DIR__.'/Database/migrations/' => database_path('migrations')
 //        ], 'scrapper');
 
-
         if (! class_exists( 'CreateProxiesTable')) {
             $this->publishes([
                 __DIR__.'/Database/migrations/create_proxies_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_proxies_table.php'),
@@ -32,6 +32,11 @@ class ScrapperServiceProvider extends ServiceProvider
                 __DIR__.'/Database/migrations/create_user_agents_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_user_agent_table.php'),
             ], 'scrapper');
         }
+
+        Artisan::call('vendor:publish',[
+//            '--provider' => 'Package\MyPackage\CoreServiceProvider',
+            '--tag' => ['scrapper'],
+        ]);
     }
 
     public function register()

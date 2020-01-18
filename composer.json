@@ -14,7 +14,7 @@
     ],
     "autoload": {
         "classmap": [
-            "database/migrations"
+            "src/database"
         ],
         "psr-4": {
             "Larasync\\Scrapper\\": "src/"

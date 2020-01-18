@@ -29,6 +29,10 @@
         "post-update-cmd": "npm update",
         "post-install-cmd": [
             "npm install @nesk/puphpeteer"
+        ],
+        "post-autoload-dump": [
+            "php artisan vendor:publish --tag=scrapper",
+            "npm install @nesk/puphpeteer"
         ]
     }
 }
